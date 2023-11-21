@@ -1,22 +1,5 @@
-// Sidebar.js
-/*import React from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
-import '../css/Sidebar.css';
-
-const Sidebar = () => {
-  return (
-    <>
-    <h1>sidebar</h1>
-   
-    </>
-  );
-};
-
-export default Sidebar;*/
-
 import styled from "styled-components";
 import logo from "../assets/react.svg";
-
 import { v } from "../styles/Variables";
 import {
   AiOutlineLeft,
@@ -28,6 +11,7 @@ import { MdOutlineAnalytics, MdLogout } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { ThemeContext } from "../App";
+
 export function Sidebar({ sidebarOpen, setSidebarOpen }) {
   const ModSidebaropen = () => {
     setSidebarOpen(!sidebarOpen);
@@ -43,10 +27,11 @@ export function Sidebar({ sidebarOpen, setSidebarOpen }) {
         <AiOutlineLeft />
       </button>
       <div className="Logocontent">
-        <div className="imgcontent">
+      {/*aqui esta el logo y el titulo*/}
+      <div className="imgcontent">
           <img src={logo} />
         </div>
-        <h2>codigo369</h2>
+        <h2>proyecto analisis</h2>
       </div>
       {linksArray.map(({ icon, label, to }) => (
         <div className="LinkContainer" key={label}>
@@ -98,30 +83,20 @@ export function Sidebar({ sidebarOpen, setSidebarOpen }) {
 //#region Data links
 const linksArray = [
   {
-    label: "Homess",
+    label: "Home",
     icon: <AiOutlineHome />,
     to: "/",
   },
   {
-    label: "Estadisticas",
+    label: "Nueva solicitud",
     icon: <MdOutlineAnalytics />,
-    to: "/estadisticas",
+    to: "/details",
   },
   {
-    label: "Productos",
+    label: "Solicitudes",
     icon: <AiOutlineApartment />,
     to: "/productos",
-  },
-  {
-    label: "Diagramas",
-    icon: <MdOutlineAnalytics />,
-    to: "/diagramas",
-  },
-  {
-    label: "Reportes",
-    icon: <MdOutlineAnalytics />,
-    to: "/reportes",
-  },
+  }
 ];
 const secondarylinksArray = [
   {
@@ -303,7 +278,7 @@ const Container = styled.div`
   }
 `;
 const Divider = styled.div`
-  height: 1px;
+  height: 2px;
   width: 100%;
   background: ${(props) => props.theme.bg3};
   margin: ${v.lgSpacing} 0;
