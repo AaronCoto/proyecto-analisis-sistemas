@@ -90,12 +90,12 @@ const linksArray = [
   {
     label: "Nueva solicitud",
     icon: <MdOutlineAnalytics />,
-    to: "/details",
+    to: "/NewSolicitud",
   },
   {
     label: "Solicitudes",
     icon: <AiOutlineApartment />,
-    to: "/productos",
+    to: "/details",
   }
 ];
 const secondarylinksArray = [
