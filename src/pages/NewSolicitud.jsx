@@ -11,6 +11,7 @@ export default function NewSolicitud({ Login }) {
     enviarDatos(data);
     alert("se envio correctamente");
   };
+  
   const enviarDatos = async (data) => {
     try {
       const respuesta = await fetch("http://localhost:4000/tiquetes/new", {

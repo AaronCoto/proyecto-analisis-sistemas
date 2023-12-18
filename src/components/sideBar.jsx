@@ -8,9 +8,11 @@ import {
   AiOutlineSetting,
 } from "react-icons/ai";
 import { MdOutlineAnalytics, MdLogout } from "react-icons/md";
+import { GrContact } from "react-icons/gr";
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { ThemeContext } from "../App";
+import '../css/salir.css'
 
 export function Sidebar({ sidebarOpen, setSidebarOpen }) {
   const ModSidebaropen = () => {
@@ -19,6 +21,11 @@ export function Sidebar({ sidebarOpen, setSidebarOpen }) {
   const { setTheme, theme } = useContext(ThemeContext);
   const CambiarTheme = () => {
     setTheme((theme) => (theme === "light" ? "dark" : "light"));
+  };
+
+  const handleReload = () => {
+    // Recargar la página
+    window.location.reload();
   };
 
   return (
@@ -77,6 +84,7 @@ export function Sidebar({ sidebarOpen, setSidebarOpen }) {
           </div>
         </div>
       </div> */}
+      <MdLogout className="btnSalir" onClick={handleReload}/>
     </Container>
   );
 }
@@ -97,16 +105,16 @@ const linksArray = [
     icon: <AiOutlineApartment />,
     to: "/solicitudesAdmin",
   },{
-    label: "form",
+    label: "Agregar Usuarios",
     icon: <AiOutlineApartment />,
-    to: "/form",
+    to: "/newUser",
   }
 ];
 const secondarylinksArray = [
   {
-    label: "Salir",
-    icon: <MdLogout />,
-    to: "/logout",
+    label: "Info",
+    icon: <GrContact />,
+    to: "/null",
   },
 ];
 //#endregion
