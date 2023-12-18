@@ -57,7 +57,7 @@ export function Sidebar({ sidebarOpen, setSidebarOpen }) {
         </div>
       ))}
       <Divider />
-      <div className="Themecontent">
+      {/* <div className="Themecontent">
         {sidebarOpen && <span className="titletheme">Dark mode</span>}
         <div className="Togglecontent">
           <div className="grid theme-container">
@@ -76,7 +76,7 @@ export function Sidebar({ sidebarOpen, setSidebarOpen }) {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </Container>
   );
 }
@@ -95,19 +95,18 @@ const linksArray = [
   {
     label: "Solicitudes",
     icon: <AiOutlineApartment />,
-    to: "/details",
+    to: "/solicitudesAdmin",
+  },{
+    label: "form",
+    icon: <AiOutlineApartment />,
+    to: "/form",
   }
 ];
 const secondarylinksArray = [
   {
-    label: "Configuración",
-    icon: <AiOutlineSetting />,
-    to: "/null",
-  },
-  {
     label: "Salir",
     icon: <MdLogout />,
-    to: "/null",
+    to: "/logout",
   },
 ];
 //#endregion

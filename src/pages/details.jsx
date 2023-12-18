@@ -1,11 +1,5 @@
-function Details() {
-  
-    return (
-      <>
-        
-       <h1>details</h1>
-      </>
-    )
-  }
-  
-  export default Details
+export default function details(){
+  return(
+    <div><h3>details</h3></div>
+  )
+}

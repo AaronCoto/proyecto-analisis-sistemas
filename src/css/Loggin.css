@@ -1,0 +1,27 @@
+.solicitud-login {
+  height: 100vh; 
+  width: 100%; 
+  background-color: #070707; 
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.items-login {
+  display: block;
+  margin: 20px;
+}
+.solicitud-login h2 {
+  display: block;
+}
+.solicitud-login label {
+  display: block;
+  font-size: large;
+}
+
+.icon{
+    height: 50px;
+    width: 80px;
+    
+}

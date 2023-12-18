@@ -1,0 +1,18 @@
+.tablaUser{
+    background-color: rgba(220, 177, 3, 0.74);
+    border-color: black;
+   
+    /* height: 100vh;
+  width: 100vw; */
+}
+.iconU{
+    height: 31px;
+    width: 50px;
+    padding: 4px;
+    margin: px;
+}
+
+.itemsU{
+    display: block;
+    align-items: center;
+}
